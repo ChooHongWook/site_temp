@@ -7,14 +7,15 @@
     "apps/*",
     "packages/*"
   ],
-  "scripts": {
-    "dev": "turbo run dev",
+  "scripts": {   
+    "sync:env": "node ./scripts/sync-env.js", 
+    "dev": "pnpm sync:env && turbo run dev",
+    "build": "pnpm sync:env && turbo run build",
     "db:migrate:deploy": "turbo run db:migrate:deploy",
     "db:migrate:dev": "turbo run db:migrate:dev",
     "db:push": "turbo run db:push",
     "db:seed": "turbo run db:seed",
     "generate": "turbo run generate",
-    "build": "turbo run build",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "test": "turbo run test",
