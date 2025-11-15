@@ -11,7 +11,7 @@
     "db:migrate:dev": "turbo run db:migrate:dev",
     "db:push": "turbo run db:push",
     "db:seed": "turbo run db:seed",
-    "generate": "turbo run generate",
+    "db:generate": "turbo run db:generate",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
     "test": "turbo run test",

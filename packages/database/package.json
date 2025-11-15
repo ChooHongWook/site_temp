@@ -5,17 +5,17 @@
     "./*": "./src/*.ts"
   },
   "scripts": {
+    "dev": "tsup src/* --watch",
     "db:migrate:deploy": "prisma migrate deploy",
     "db:migrate:dev": "prisma migrate dev",
     "db:push": "prisma db push",
     "db:seed": "tsx src/seed.ts",
-    "dev": "tsup src/* --watch",
+    "db:generate": "prisma generate",
+    "prebuild": "npm run db:generate",
+    "predev": "npm run db:generate",
     "format": "prisma format",
-    "generate": "prisma generate",
-    "lint": "eslint . --max-warnings 0",
-    "prebuild": "npm run generate",
-    "predev": "npm run generate",
-    "studio": "prisma studio"
+    "studio": "prisma studio",
+    "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
     "@prisma/client": "latest"
