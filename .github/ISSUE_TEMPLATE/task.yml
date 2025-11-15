@@ -2,6 +2,7 @@ name: Task
 description: 새로운 작업(Task)을 생성합니다
 title: '[TASK] '
 labels: ['enhancement']
+projects: ['site_temp_project']
 assignees: ['@me']
 body:
   - type: markdown
@@ -15,7 +16,7 @@ body:
     attributes:
       label: Task Title
       description: 작업의 제목을 입력하세요
-      placeholder: '예: 로그인 API 구현'
+      value: '예: 로그인 API 구현'
     validations:
       required: true
 
