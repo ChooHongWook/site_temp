@@ -1,9 +1,10 @@
-import type { Link } from '@repo/api';
 import { Button } from '@repo/ui/button';
 import Image, { type ImageProps } from 'next/image';
 import { prisma } from "@repo/database/client";
-
+import { getLinks } from '../links';
 import styles from './page.module.css';
+
+export const dynamic = 'force-dynamic';
 
 type Props = Omit<ImageProps, 'src'> & {
   srcLight: string;
@@ -20,23 +21,6 @@ const ThemeImage = (props: Props) => {
     </>
   );
 };
-
-async function getLinks(): Promise<Link[]> {
-  try {
-    const res = await fetch('http://localhost:3000/links', {
-      cache: 'no-store',
-    });
-
-    if (!res.ok) {
-      throw new Error('Failed to fetch links');
-    }
-
-    return res.json();
-  } catch (error) {
-    console.error('Error fetching links:', error);
-    return [];
-  }
-}
 
 export default async function Home() {
     const users = await prisma.user.findMany();
