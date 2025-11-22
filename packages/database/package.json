@@ -4,7 +4,6 @@
   "exports": {
     "./*": "./src/*.ts"
   },
-  "type": "module",
   "scripts": {
     "dev": "tsup src/* --watch",
     "db:migrate:deploy": "prisma migrate deploy",
