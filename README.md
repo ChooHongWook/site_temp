@@ -9,12 +9,6 @@ docker-compose up -d
 ```
 
 ```bash
-cp .env.example ./packages/database/.env
-cp .env.example ./apps/web/.env
-cp .env.example ./apps/api/.env
-```
-
-```bash
 pnpm run db:migrate:dev
 ```
 
@@ -31,8 +25,8 @@ pnpm run build
 ```bash
 .
 ├── apps
-│   ├── api                       # NestJS app (https://nestjs.com).
-│   └── web                       # Next.js app (https://nextjs.org).
+│   ├── be                       # NestJS app (https://nestjs.com).
+│   └── fe                       # Next.js app (https://nextjs.org).
 └── packages
     ├── @repo/api                 # `NestJS` 관련 api 소스.
     ├── @repo/database            # `Prisma ORM` database 관련  (https://prisma.io).
@@ -49,7 +43,7 @@ pnpm run build
 - 도커 컨테이너 접속 후 DB 접속
 
 ```bash
-# 도커 접속
+# docker 접속
 # docker exec -it [CONTAINER NAME] bash
 docker exec -it turborepo_postgres bash
 
