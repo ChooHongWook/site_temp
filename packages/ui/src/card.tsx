@@ -1,16 +1,13 @@
-import { type JSX } from 'react';
+import { ReactNode } from 'react';
 
-export function Card({
-  className,
-  title,
-  children,
-  href,
-}: {
+interface ICardProps {
   className?: string;
   title: string;
-  children: React.ReactNode;
+  children: ReactNode;
   href: string;
-}): JSX.Element {
+}
+
+export function Card({ className, title, children, href }: ICardProps) {
   return (
     <a
       className={className}
