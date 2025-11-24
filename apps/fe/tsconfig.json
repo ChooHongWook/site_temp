@@ -11,7 +11,9 @@
       "@api": ["src/api"],
       "@api/*": ["src/api/*"],
       "@provider": ["src/provider"],
-      "@provider/*": ["src/provider/*"]
+      "@provider/*": ["src/provider/*"],
+      "@config": ["src/config"],
+      "@config/*": ["src/config/*"]
     }
   },
   "include": [
