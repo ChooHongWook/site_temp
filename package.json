@@ -28,6 +28,7 @@
     "@repo/typescript-config": "workspace:*",
     "@turbo/gen": "^1.10.12",
     "@types/node": "^24.10.1",
+    "eslint": "^9.31.0",
     "husky": "^8.0.3",
     "lint-staged": "^14.0.1",
     "prettier": "^3.2.5",
