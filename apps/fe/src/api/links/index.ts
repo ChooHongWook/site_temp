@@ -1,5 +1,5 @@
 import type { Link } from '@repo/api';
-import { api } from '@config/axios';
+import { api } from '@/config/axios';
 
 export async function getLinks(): Promise<Link[]> {
   try {
